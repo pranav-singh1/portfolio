@@ -29,6 +29,8 @@ export default {
         'glitch': 'glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite',
         'fade-in': 'fadeIn 0.8s ease-in forwards',
         'slide-up': 'slideUp 0.6s ease-out forwards',
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         glitch: {
@@ -46,6 +48,14 @@ export default {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
       },
     },
   },

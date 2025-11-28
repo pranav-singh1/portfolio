@@ -395,9 +395,9 @@ const App = () => {
                         </div>
                     </section>
 
-                    {/* Tech Stack */}
+                    {/* Technical Skills */}
                     <section>
-                        <SectionHeader title="Stack" />
+                        <SectionHeader title="Technical Skills" />
                         <div className="space-y-8">
                             {SKILLS.map((category, index) => (
                                 <div key={index}>

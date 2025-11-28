@@ -112,15 +112,23 @@ export const CURRENTLY = {
 export const SKILLS = [
   {
     category: "Languages",
-    items: ["Python", "TypeScript", "Java", "C++", "SQL", "R"]
+    items: ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "C#", "SQL", "R", "HTML/CSS"]
   },
   {
-    category: "Frameworks",
-    items: ["React", "Next.js", "FastAPI", "PyTorch", "Tailwind"]
+    category: "Frameworks & Libraries",
+    items: ["React", "Next.js", "Node.js", "FastAPI", "Flask", "TensorFlow", "PyTorch", "Tailwind CSS"]
   },
   {
-    category: "Tools / Infra",
-    items: ["Docker", "AWS", "Git", "Linux", "Vercel"]
+    category: "ML & Data",
+    items: ["scikit-learn", "XGBoost", "pandas", "NumPy", "Matplotlib"]
+  },
+  {
+    category: "Developer Tools",
+    items: ["Git", "Docker", "AWS", "Linux", "Vercel"]
+  },
+  {
+    category: "APIs & Databases",
+    items: ["OpenAI API", "Vapi", "PostgreSQL", "MongoDB", "Supabase", "Firebase"]
   }
 ];
 

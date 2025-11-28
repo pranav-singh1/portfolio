@@ -24,7 +24,7 @@ export const EXPERIENCE = [
     ]
   },
   {
-    title: "Software Intern",
+    title: "Data Analytics Intern",
     company: "RS Associates CPA",
     date: "Nov '24 - Jan '25",
     details: [
@@ -47,6 +47,28 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
+    title: "EchoLearn.ai",
+    subtitle: "Full Stack AI Platform",
+    desc: "AI study platform with 500+ users. Integrated GPT-4 and Vapi pipelines for real-time voice tutoring (sub-350ms latency).",
+    stack: ["Next.js", "TypeScript", "OpenAI", "Vapi"],
+    link: "https://app.echolearn.ai",
+    details: [
+      "Architected real-time voice pipeline achieving sub-350ms latency using Vapi and GPT-4.",
+      "Optimized database queries and RLS policies in Supabase to handle concurrent user sessions."
+    ]
+  },
+  {
+    title: "Spotto-AI",
+    subtitle: "Sports Analytics Engine",
+    desc: "Engineered 30+ time-series features from 59K+ NBA game logs. Achieved 60% win rate and 14.6% ROI across 1,000+ backtested predictions, with automated monitoring on new games.",
+    stack: ["Python", "FastAPI", "XGBoost", "Pandas", "NumPy"],
+    details: [
+      "Developed custom feature engineering pipeline for time-series data normalization.",
+      "Built FastAPI inference service to serve model predictions with <50ms latency.",
+      "Implemented daily ETL jobs and evaluation scripts to track live model performance against Vegas lines."
+    ]
+  },
+  {
     title: "SchedUW",
     subtitle: "Syllabus Calendar Generator",
     desc: "Intelligent syllabus parser that uses Claude AI to extract deadlines and generate .ics calendar files. Solves manual entry fatigue for students.",
@@ -59,35 +81,14 @@ export const PROJECTS = [
     ]
   },
   {
-    title: "EchoLearn.ai",
-    subtitle: "Full Stack AI Platform",
-    desc: "AI study platform with 500+ users. Integrated GPT-4 and Vapi pipelines for real-time voice tutoring (sub-350ms latency).",
-    stack: ["Next.js", "TypeScript", "OpenAI", "Vapi"],
-    link: "https://app.echolearn.ai",
-    details: [
-        "Architected real-time voice pipeline achieving sub-350ms latency using Vapi and GPT-4.",
-        "Optimized database queries and RLS policies in Supabase to handle concurrent user sessions."
-    ]
-  },
-  {
-    title: "Spotto-AI",
-    subtitle: "Sports Analytics Engine",
-    desc: "Engineered 30+ time-series features from 59K+ NBA game logs. Achieved 60% win rate and 14.6% ROI across 1,000+ backtested predictions.",
-    stack: ["Python", "FastAPI", "XGBoost", "Pandas"],
-    details: [
-        "Developed custom feature engineering pipeline for time-series data normalization.",
-        "Built FastAPI inference service to serve model predictions with <50ms latency."
-    ]
-  },
-  {
     title: "Focus Helper",
     subtitle: "Chrome Extension",
     desc: "Built distraction-blocking Chrome extension with rule-based URL filtering and permission sandboxing. Maintained a 5.0-star rating.",
     stack: ["JavaScript", "HTML/CSS", "Chrome Extensions API"],
     link: "https://chromewebstore.google.com/detail/focus-helper/ddgdbilnbpmhdgeiffgnfkhidnjbjlpk?pli=1",
     details: [
-        "Implemented rule-based URL filtering to block distracting sites during focus sessions.",
-        "Utilized Chrome permissions API for secure tab management and sandboxing."
+      "Implemented rule-based URL filtering to block distracting sites during focus sessions.",
+      "Utilized Chrome permissions API for secure tab management and sandboxing."
     ]
   }
 ];

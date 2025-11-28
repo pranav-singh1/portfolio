@@ -319,7 +319,7 @@ const App = () => {
                         <div className="font-mono text-xs md:text-sm text-gray-300 mb-4 flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/30 pb-4 font-bold">
                             <span>{BIO.location}</span>
                             <span>{BIO.email}</span>
-                            <span className="text-white font-bold animate-pulse">[{BIO.graduation}]</span>
+                            <span className="text-white font-bold">[{BIO.graduation}]</span>
                         </div>
                         <h1 className="text-6xl md:text-8xl font-black text-gray-100 tracking-tighter leading-[0.8] mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] uppercase">
                             {BIO.name.split(' ').map((word, i) => (

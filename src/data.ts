@@ -10,7 +10,7 @@ export const BIO = {
   description: "I'm a Computer Science and Data Science student at UW–Madison. I'm interested in software engineering, applied machine learning, and building predictive modeling systems for financial and data-driven applications."
 };
 
-export const SEEKING = "Seeking Summer 2026 Software Engineering internship roles focused on backend systems or applied ML.";
+export const SEEKING = "Seeking Summer 2026 Software Engineering internship roles.";
 
 export const EXPERIENCE = [
   {
@@ -115,8 +115,8 @@ export const SKILLS = [
     items: ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "C#", "SQL", "R", "HTML/CSS"]
   },
   {
-    category: "Frameworks & Libraries",
-    items: ["React", "Next.js", "Node.js", "FastAPI", "Flask", "TensorFlow", "PyTorch", "Tailwind CSS"]
+    category: "Frameworks",
+    items: ["React", "Next.js", "FastAPI", "PyTorch", "Tailwind"]
   },
   {
     category: "ML & Data",

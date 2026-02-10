@@ -2,45 +2,49 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const BIO = {
   name: "PRANAV SINGH",
-  role: "Student",
+  role: "Software Engineer",
   university: "UW Madison",
   graduation: "CO 2027",
   location: "MADISON, WI",
   email: "psingh99@wisc.edu",
-  description: "I'm a Computer Science and Data Science student at UW–Madison. I'm interested in software engineering, applied machine learning, and building predictive modeling systems for financial and data-driven applications."
+  description:
+    "I am a software engineer focused on building data-intensive and ML-powered systems end to end. Most of my work is backend and infrastructure-oriented, including APIs, data pipelines, and performance-sensitive services, with frontend used primarily to ship complete products."
 };
 
 export const SEEKING = "Seeking Summer 2026 Software Engineering internship roles.";
 
 export const EXPERIENCE = [
   {
-    title: "Software Engineer Intern",
-    company: "Mobility Labs Apps",
-    date: "Jun '25 - Aug '25",
+    title: "Software Engineering Intern",
+    company: "Mobility Labs Apps · Remote",
+    date: "Jun 2025 – Aug 2025",
     details: [
-      "Built 10+ React and TypeScript components across core product flows used by 500K+ monthly users.",
-      "Implemented 3D Spline visuals and optimized asset delivery, reducing page load time by 22%.",
-      "Integrated REST APIs and reusable validation modules, reducing frontend QA issues by 35%."
+      "Built and shipped 10+ React and TypeScript components across core product flows for actively maintained mobile applications.",
+      "Integrated REST APIs and reusable validation modules, reducing frontend QA issues by 35%.",
+      "Implemented 3D Spline visuals and optimized asset loading, improving page load times by 22%.",
+      "Collaborated with designers and backend engineers to deliver production-ready features on tight timelines."
     ]
   },
   {
-    title: "Data Analytics Intern",
-    company: "RS Associates CPA",
-    date: "Nov '24 - Jan '25",
+    title: "Software Engineering Intern",
+    company: "RS Associates CPA · San Ramon, CA",
+    date: "Nov 2024 – Jan 2025",
     details: [
-      "Built Python and SQL pipelines processing 5K+ financial records monthly for reporting workflows.",
-      "Automated data cleaning and validation, reducing manual spreadsheet work by 40%.",
-      "Developed reporting scripts generating monthly summaries 3x faster than prior manual process."
+      "Designed and implemented Python and SQL data pipelines processing 5,000+ financial records per month.",
+      "Automated data cleaning, validation, and reporting workflows, reducing manual spreadsheet work by 40%.",
+      "Built reporting scripts that generated monthly financial summaries 3x faster than prior manual processes.",
+      "Worked closely with non-technical stakeholders to translate business requirements into reliable software tools."
     ]
   },
   {
-    title: "ML Researcher",
-    company: "Stanford University",
-    date: "Jun '23 - Jul '23",
+    title: "Machine Learning Researcher",
+    company: "Stanford University · Remote",
+    date: "Jun 2023 – Jul 2023",
     details: [
-      "Selected as one of 30 students from 3,000+ applicants for faculty-led ML research cohort.",
-      "Built logistic regression and random forest models improving baseline accuracy by 12%.",
-      "Evaluated fairness metrics and optimized preprocessing for clinical classification tasks."
+      "Selected as one of 30 students from over 3,000 applicants for a faculty-led machine learning research cohort.",
+      "Built and evaluated logistic regression and random forest models, improving baseline performance by 12%.",
+      "Analyzed fairness metrics and optimized data preprocessing for clinical classification tasks.",
+      "Presented findings and technical tradeoffs to research mentors and peers."
     ]
   }
 ];
@@ -49,23 +53,28 @@ export const PROJECTS = [
   {
     title: "EchoLearn.ai",
     subtitle: "Full Stack AI Platform",
-    desc: "AI study platform with 500+ users. Integrated GPT-4 and Vapi pipelines for real-time voice tutoring (sub-350ms latency).",
-    stack: ["Next.js", "TypeScript", "OpenAI", "Vapi"],
+    desc:
+      "Full-stack AI-powered study platform with real users and production authentication using Supabase and row-level security.",
+    stack: ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "OpenAI API", "Vapi"],
     link: "https://app.echolearn.ai",
     details: [
-      "Architected real-time voice pipeline achieving sub-350ms latency using Vapi and GPT-4.",
-      "Optimized database queries and RLS policies in Supabase to handle concurrent user sessions."
+      "Built a full-stack AI-powered study platform with real user signups and production authentication using Supabase and row-level security.",
+      "Designed real-time voice tutoring pipelines integrating GPT-4 and Vapi with sub-350ms response latency.",
+      "Implemented Stripe subscriptions, CI/CD workflows, and API optimizations reducing redundant queries by 30%.",
+      "Architected backend services with scalability and reliability in mind rather than prototype-only design."
     ]
   },
   {
     title: "Spotto-AI",
     subtitle: "Sports Analytics Engine",
-    desc: "Engineered 30+ time-series features from 59K+ NBA game logs. Achieved 60% win rate and 14.6% ROI across 1,000+ backtested predictions, with automated monitoring on new games.",
-    stack: ["Python", "FastAPI", "XGBoost", "Pandas", "NumPy"],
+    desc:
+      "Production-style backend system composed of decoupled services and ML models powering sports analytics workflows.",
+    stack: ["Python", "FastAPI", "SQLite", "Prisma", "Docker", "XGBoost"],
     details: [
-      "Developed custom feature engineering pipeline for time-series data normalization.",
-      "Built FastAPI inference service to serve model predictions with <50ms latency.",
-      "Implemented daily ETL jobs and evaluation scripts to track live model performance against Vegas lines."
+      "Architected a production-style backend system composed of 9 decoupled services communicating via APIs.",
+      "Built ML-backed inference services with 50+ engineered features and calibrated outputs, serving responses in under 50ms.",
+      "Implemented automated data ingestion, validation, and historical analytics pipelines integrating multiple external APIs.",
+      "Focused on system design, service boundaries, and performance rather than standalone model experimentation."
     ]
   },
   {
@@ -83,23 +92,24 @@ export const PROJECTS = [
   {
     title: "Focus Helper",
     subtitle: "Chrome Extension",
-    desc: "Built distraction-blocking Chrome extension with rule-based URL filtering and permission sandboxing. Maintained a 5.0-star rating.",
+    desc:
+      "Distraction-blocking Chrome extension using rule-based URL filtering and permission sandboxing to protect focus time.",
     stack: ["JavaScript", "HTML/CSS", "Chrome Extensions API"],
     link: "https://chromewebstore.google.com/detail/focus-helper/ddgdbilnbpmhdgeiffgnfkhidnjbjlpk?pli=1",
     details: [
-      "Implemented rule-based URL filtering to block distracting sites during focus sessions.",
-      "Utilized Chrome permissions API for secure tab management and sandboxing."
+      "Built a distraction-blocking Chrome extension using rule-based URL filtering and permission sandboxing.",
+      "Achieved a 5.0-star rating with consistent weekly usage among early testers.",
+      "Designed the extension with maintainability and user safety in mind."
     ]
   }
 ];
 
 export const COURSEWORK = [
-    "Data Structures and Algorithms",
-    "Artificial Intelligence",
-    "Data Modeling",
-    "DS Programming",
-    "Computer Systems",
-    "Linear Algebra"
+  "Data Structures and Algorithms",
+  "Artificial Intelligence",
+  "Computer Systems",
+  "Data Modeling",
+  "Linear Algebra"
 ];
 
 export const CURRENTLY = {
@@ -112,23 +122,23 @@ export const CURRENTLY = {
 export const SKILLS = [
   {
     category: "Languages",
-    items: ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "C#", "SQL", "R", "HTML/CSS"]
+    items: ["Python", "JavaScript", "TypeScript", "C++", "C", "Java", "SQL", "R", "HTML/CSS"]
   },
   {
-    category: "Frameworks",
-    items: ["React", "Next.js", "FastAPI", "PyTorch", "Tailwind"]
+    category: "Backend and Systems",
+    items: ["FastAPI", "Flask", "REST APIs", "Linux", "Docker", "CI/CD", "PostgreSQL", "SQLite"]
   },
   {
-    category: "ML & Data",
-    items: ["scikit-learn", "XGBoost", "pandas", "NumPy", "Matplotlib"]
+    category: "Frontend",
+    items: ["React", "Next.js", "Tailwind CSS"]
+  },
+  {
+    category: "ML and Data",
+    items: ["scikit-learn", "XGBoost", "pandas", "NumPy", "Feature Engineering", "Model Evaluation"]
   },
   {
     category: "Developer Tools",
-    items: ["Git", "Docker", "AWS", "Linux", "Vercel"]
-  },
-  {
-    category: "APIs & Databases",
-    items: ["OpenAI API", "Vapi", "PostgreSQL", "MongoDB", "Supabase", "Firebase"]
+    items: ["Git", "AWS", "Vercel", "Supabase", "Firebase", "VS Code"]
   }
 ];
 

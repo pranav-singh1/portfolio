@@ -26,7 +26,7 @@ export const EXPERIENCE = [
     ]
   },
   {
-    title: "Software Engineering Intern",
+    title: "Data Analytics Intern",
     company: "RS Associates CPA · San Ramon, CA",
     date: "Nov 2024 – Jan 2025",
     details: [

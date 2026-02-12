@@ -19,7 +19,6 @@ export default function Footer() {
         ))}
       </div>
 
-      <p className="mt-6 text-xs text-[#333]">&copy; 2026</p>
     </footer>
   );
 }

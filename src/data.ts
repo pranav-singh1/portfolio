@@ -80,11 +80,11 @@ export const PROJECTS = [
   {
     title: "SchedUW",
     subtitle: "Syllabus Calendar Generator",
-    desc: "Intelligent syllabus parser that uses Claude AI to extract deadlines and generate .ics calendar files. Solves manual entry fatigue for students.",
-    stack: ["Next.js 14", "Claude Sonnet 4.5", "TypeScript", "PDF Parsing", "iCal Generation"],
+    desc: "Intelligent syllabus parser that uses AI to extract deadlines and generate .ics calendar files. Solves manual entry fatigue for students.",
+    stack: ["Next.js 14", "LLM API", "TypeScript", "PDF Parsing", "iCal Generation"],
     link: "https://github.com/pranav-singh1/SchedUW",
     details: [
-      "Designed agentic tool-calling architecture for Claude to autonomously categorize events.",
+      "Designed agentic tool-calling architecture for autonomous event categorization.",
       "Built robust PDF parsing pipeline handling multi-page syllabi with complex layouts.",
       "Implemented complete calendar generation logic compliant with iCalendar (RFC 5545) standards."
     ]

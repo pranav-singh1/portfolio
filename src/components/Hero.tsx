@@ -8,7 +8,7 @@ export default function Hero() {
       </h1>
 
       <p className="mt-4 text-sm text-[#888] animate-fade-in-delay-1">
-        Student studying CS & DS — {BIO.university} '27
+        Computer Science & Data Science student— {BIO.university} '27
       </p>
 
       <p className="mt-1 text-xs text-[#666] animate-fade-in-delay-1">

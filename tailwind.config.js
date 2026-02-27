@@ -6,24 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        bg: '#0a0a0a',
+        accent: '#f5a623',
+        'accent-dim': 'rgba(245, 166, 35, 0.15)',
+        dim: '#888',
+        'border-subtle': 'rgba(255, 255, 255, 0.06)',
+      },
       fontFamily: {
-        sans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
-        display: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
-      },
-      letterSpacing: {
-        tighter: '-0.05em',
-        tight: '-0.025em',
-        normal: '0',
-        wide: '0.025em',
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-out forwards',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
+        mono: ['"JetBrains Mono"', 'monospace'],
+        serif: ['"Instrument Serif"', 'serif'],
       },
     },
   },

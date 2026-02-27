@@ -2,79 +2,274 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #0a0a0a;
+  --text: #e8e8e8;
+  --text-dim: #888;
+  --text-dimmer: #666;
+  --accent: #f5a623;
+  --border: rgba(255, 255, 255, 0.06);
+  --nav-bg: rgba(10, 10, 10, 0.7);
+  --card-bg: rgba(255, 255, 255, 0.04);
+}
+
+:root.light {
+  --bg: #ffffff;
+  --text: #111111;
+  --text-dim: #555;
+  --text-dimmer: #888;
+  --accent: #f5a623;
+  --border: rgba(0, 0, 0, 0.08);
+  --nav-bg: rgba(255, 255, 255, 0.7);
+  --card-bg: rgba(0, 0, 0, 0.03);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-black text-white antialiased;
-    font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Courier New', monospace;
-    overflow-x: hidden;
-  }
-
-  ::selection {
-    background: #39FF14;
-    color: #000;
-  }
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbar for IE, Edge and Firefox */
-  html {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out both;
-}
-
-.animate-fade-in-delay-1 {
-  animation: fadeIn 0.5s ease-out 0.1s both;
-}
-
-.animate-fade-in-delay-2 {
-  animation: fadeIn 0.5s ease-out 0.2s both;
-}
-
-.animate-fade-in-delay-3 {
-  animation: fadeIn 0.5s ease-out 0.3s both;
-}
-
-.animate-fade-in-delay-4 {
-  animation: fadeIn 0.5s ease-out 0.4s both;
-}
-
-.animate-fade-in-delay-5 {
-  animation: fadeIn 0.5s ease-out 0.5s both;
-}
-
-/* Subtle noise grain overlay */
+/* ── Film Grain Overlay ── */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 128px 128px;
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero Fade-Up Animations ── */
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.hero-fade-name { animation: fade-up 0.6s ease-out 0.2s forwards; }
+.hero-fade-bio { animation: fade-up 0.6s ease-out 0.5s forwards; }
+.hero-fade-desc { animation: fade-up 0.6s ease-out 0.7s forwards; }
+.hero-fade-currently { animation: fade-up 0.6s ease-out 0.9s forwards; }
+
+/* ── Car Scene ── */
+.car-scene {
+  position: relative;
+  width: 800px;
+  max-width: 90vw;
+  height: 320px;
+  cursor: pointer;
+}
+
+.car-scene:hover .car-img {
+  animation: rev-pulse 0.15s ease-in-out 3;
+}
+
+@keyframes rev-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+
+/* Car drive-in */
+.car-container {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  animation: drive-in 2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes drive-in {
+  0% { transform: translateX(-120%); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.car-img-wrapper {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1024 / 682;
+  margin: 0 auto;
+}
+
+.car-img {
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+  user-select: none;
+}
+
+:root.light .car-img {
+  filter: none;
+}
+
+/* Spinning wheel overlays */
+.wheel-overlay {
+  position: absolute;
+  width: 16.5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.wheel-mask {
+  position: absolute;
+  inset: 5%;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.wheel-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+  animation: wheel-spin 1.5s linear infinite;
+}
+
+:root.light .wheel-img {
+  filter: none;
+}
+
+.wheel-rear {
+  left: 20.5%;
+  top: 57%;
+  width: 15.5%;
+}
+
+.wheel-front {
+  left: 76.5%;
+  top: 58.5%;
+}
+
+@keyframes wheel-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Exhaust particles */
+.exhaust-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--text-dim);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.exhaust-particle.active {
+  animation: exhaust 1.8s ease-out infinite;
+}
+
+.exhaust-particle:nth-child(1) { bottom: 120px; left: 22%; animation-delay: 2.2s; }
+.exhaust-particle:nth-child(2) { bottom: 124px; left: 21%; animation-delay: 2.6s; }
+.exhaust-particle:nth-child(3) { bottom: 117px; left: 23%; animation-delay: 3.0s; }
+.exhaust-particle:nth-child(4) { bottom: 122px; left: 20%; animation-delay: 3.3s; }
+.exhaust-particle:nth-child(5) { bottom: 119px; left: 22%; animation-delay: 3.7s; }
+
+@keyframes exhaust {
+  0% { opacity: 0.5; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-40px, -8px) scale(2.5); }
+}
+
+/* Road line */
+.road {
+  position: absolute;
+  bottom: 82px;
+  left: 0;
+  width: 200%;
+  height: 1px;
+  overflow: hidden;
+}
+
+.road-line {
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text-dim) 0px,
+    var(--text-dim) 24px,
+    transparent 24px,
+    transparent 48px
+  );
+  opacity: 0.3;
+  animation: road-scroll 2s linear infinite;
+}
+
+@keyframes road-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-48px); }
+}
+
+/* ── Footer link underline ── */
+.footer-link {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .car-scene {
+    height: 220px;
+  }
 }

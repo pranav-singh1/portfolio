@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import carImg from '../assets/car.png';
 import wheelImg from '../assets/wheel.png';
 
@@ -16,13 +17,41 @@ function Wheel({ className }: { className: string }) {
 }
 
 export default function CarScene() {
+  const [zooming, setZooming] = useState(false);
+  const [entered, setEntered] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    if (zooming) return;
+    setZooming(true);
+  };
+
+  const handleAnimationEnd = (e: React.AnimationEvent) => {
+    if (e.animationName === 'drive-in') {
+      setEntered(true);
+    }
+    if (e.animationName === 'drive-back') {
+      setZooming(false);
+    }
+  };
+
+  const containerClass = zooming
+    ? 'car-container zoom-off'
+    : entered
+      ? 'car-container entered'
+      : 'car-container';
+
   return (
-    <div className="car-scene mb-14">
+    <div className="car-scene mb-14" onClick={handleClick}>
       {[...Array(5)].map((_, i) => (
-        <div key={i} className="exhaust-particle active" />
+        <div key={i} className={`exhaust-particle ${zooming ? '' : 'active'}`} />
       ))}
 
-      <div className="car-container">
+      <div
+        ref={containerRef}
+        className={containerClass}
+        onAnimationEnd={handleAnimationEnd}
+      >
         <div className="car-img-wrapper">
           <img
             src={carImg}
@@ -36,7 +65,7 @@ export default function CarScene() {
       </div>
 
       <div className="road">
-        <div className="road-line" />
+        <div className={`road-line ${zooming ? 'road-fast' : ''}`} />
       </div>
     </div>
   );

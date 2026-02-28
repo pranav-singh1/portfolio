@@ -68,6 +68,22 @@ export default function Projects() {
             {project.description}
           </p>
 
+          {project.award && (
+            <p className="text-[11px] mb-3 italic" style={{ color: 'var(--text-dim)' }}>
+              {project.award.text}
+              <a
+                href={project.award.linkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-accent transition-colors duration-200"
+                style={{ color: 'var(--accent)' }}
+              >
+                {project.award.linkText}
+              </a>
+              {project.award.suffix}
+            </p>
+          )}
+
           <div className="flex gap-2 flex-wrap">
             {project.stack.map((tech) => (
               <span

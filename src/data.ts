@@ -50,19 +50,25 @@ export const PROJECTS = [
     link: "https://app.echolearn.ai",
   },
   {
+    name: "ClearComms",
+    tag: "Edge AI Pipeline",
+    description:
+      "On-device speech-to-structured-data pipeline for emergency radio comms with zero cloud dependency. Whisper ONNX on Qualcomm NPU achieving 17× inference speedup over CPU baseline. Llama 3 with schema-constrained prompting for fully offline incident extraction.",
+    stack: ["Python", "FastAPI", "React", "TypeScript", "ONNX", "Whisper", "Llama"],
+    link: "https://github.com/pranav-singh1/clearcomms",
+    award: {
+      text: "Won 2nd Place — Qualcomm ",
+      linkText: "MadData",
+      linkUrl: "https://devpost.com/software/clearcomms",
+      suffix: " Hackathon",
+    },
+  },
+  {
     name: "Spotto-AI",
     tag: "Sports Analytics Engine",
     description:
       "Production-style backend system with 9 decoupled services. ML-backed inference with 50+ engineered features serving responses in under 50ms.",
     stack: ["Python", "FastAPI", "SQLite", "Docker", "XGBoost"],
-  },
-  {
-    name: "SchedUW",
-    tag: "Syllabus Calendar Generator",
-    description:
-      "Agentic tool-calling architecture for autonomous event categorization. Robust PDF parsing pipeline with complete iCalendar (RFC 5545) generation.",
-    stack: ["Next.js", "TypeScript", "LLM API", "PDF Parsing"],
-    link: "https://github.com/pranav-singh1/SchedUW",
   },
   {
     name: "Focus Helper",

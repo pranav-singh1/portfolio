@@ -10,8 +10,8 @@ export default function App() {
       <Nav />
       <main className="max-w-[860px] mx-auto px-6 md:px-8">
         <Hero />
-        <Projects />
         <Experience />
+        <Projects />
         <Footer />
       </main>
     </>

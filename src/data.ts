@@ -18,6 +18,12 @@ export const CURRENTLY = {
 
 export const EXPERIENCE = [
   {
+    role: "Incoming Software Engineering Intern",
+    company: "Visa",
+    date: "May 2026",
+    description: "Payment Products Development Team",
+  },
+  {
     role: "Software Engineering Intern",
     company: "Mobility Labs Apps",
     date: "Jun 2025 – Aug 2025",

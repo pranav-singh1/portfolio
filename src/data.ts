@@ -13,7 +13,7 @@ export const BIO = {
 
 export const CURRENTLY = {
   label: "Currently",
-  text: "Continually improving EchoLearn · ML models for finance-focused prediction tasks",
+  text: "Incoming SWE Intern @ Visa · Summer 2026",
 };
 
 export const EXPERIENCE = [

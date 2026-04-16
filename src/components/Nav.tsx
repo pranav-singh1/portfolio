@@ -74,6 +74,17 @@ export default function Nav() {
               Coursework
             </Link>
           </li>
+          <li>
+            <Link
+              to="/skills"
+              className="text-[13px] no-underline tracking-wide transition-colors duration-300"
+              style={dimStyle}
+              onMouseEnter={hoverIn}
+              onMouseLeave={hoverOut}
+            >
+              Skills
+            </Link>
+          </li>
         </ul>
         <button
           onClick={() => setDark(!dark)}

@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Coursework from './components/Coursework';
+import Skills from './components/Skills';
 
 function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/coursework" element={<Coursework />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
     </>
   );

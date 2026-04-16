@@ -96,7 +96,29 @@ export const COURSEWORK = [
   { code: "CS 240", name: "Discrete Math" },
   { code: "MATH 340", name: "Linear Algebra" },
   { code: "STAT 340", name: "Data Modeling II" },
+  { code: "STAT 421", name: "Categorical Data Analysis" },
 ];
+
+export const SKILLS: Record<string, string[]> = {
+  "Languages": [
+    "Python", "JavaScript", "TypeScript", "Java", "C", "C++", "C#", "SQL", "R", "HTML/CSS",
+  ],
+  "Frameworks & Libraries": [
+    "React", "Next.js", "Node.js", "FastAPI", "Flask", "TensorFlow", "PyTorch", "Tailwind CSS",
+  ],
+  "ML & Data": [
+    "scikit-learn", "XGBoost", "pandas", "NumPy", "SciPy", "Matplotlib",
+  ],
+  "Databases": [
+    "PostgreSQL", "MongoDB", "Supabase", "Firebase", "Cassandra",
+  ],
+  "Infrastructure & DevOps": [
+    "Git", "Docker", "AWS", "Linux", "Vercel", "CI/CD", "Spark", "Hadoop", "Kafka",
+  ],
+  "APIs & Services": [
+    "OpenAI API", "Vapi", "REST APIs",
+  ],
+};
 
 export const SOCIALS = [
   { name: "Email", url: "mailto:psingh99@wisc.edu" },

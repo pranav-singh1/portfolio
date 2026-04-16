@@ -86,6 +86,18 @@ export const PROJECTS = [
   },
 ];
 
+export const COURSEWORK = [
+  { code: "CS 544", name: "Intro to Big Data Systems" },
+  { code: "CS 564", name: "Database Management Systems" },
+  { code: "CS 540", name: "Intro to Artificial Intelligence" },
+  { code: "CS 354", name: "Intro to Computer Systems" },
+  { code: "CS 400", name: "Programming III" },
+  { code: "CS 320", name: "Data Science Programming II" },
+  { code: "CS 240", name: "Discrete Math" },
+  { code: "MATH 340", name: "Linear Algebra" },
+  { code: "STAT 340", name: "Data Modeling II" },
+];
+
 export const SOCIALS = [
   { name: "Email", url: "mailto:psingh99@wisc.edu" },
   { name: "GitHub", url: "https://github.com/pranav-singh1" },

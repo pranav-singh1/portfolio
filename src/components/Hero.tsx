@@ -30,6 +30,10 @@ export default function Hero() {
           </span>
           <p className="text-[13px]" style={{ color: 'var(--text-dim)' }}>{CURRENTLY.text}</p>
         </div>
+
+        <p className="hero-fade hero-fade-currently text-[13px] mt-5 leading-relaxed" style={{ color: 'var(--text-dim)' }}>
+          Outside of work and academics, I enjoy basketball, music, weightlifting, cars, and more — added my dream car, the SVJ, right below (click on it).
+        </p>
       </div>
 
       <CarScene />

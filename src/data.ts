@@ -93,7 +93,7 @@ export const COURSEWORK = [
   { code: "CS 354", name: "Intro to Computer Systems" },
   { code: "CS 400", name: "Programming III" },
   { code: "CS 320", name: "Data Science Programming II" },
-  { code: "CS 240", name: "Discrete Math" },
+  { code: "MATH 240", name: "Discrete Math" },
   { code: "MATH 340", name: "Linear Algebra" },
   { code: "STAT 340", name: "Data Modeling II" },
   { code: "STAT 421", name: "Categorical Data Analysis" },

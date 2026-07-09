@@ -13,15 +13,16 @@ export const BIO = {
 
 export const CURRENTLY = {
   label: "Currently",
-  text: "Incoming SWE Intern @ Visa · Summer 2026",
+  text: "SWE Intern @ Visa · Summer 2026",
 };
 
 export const EXPERIENCE = [
   {
-    role: "Incoming Software Engineering Intern",
+    role: "Software Engineering Intern",
     company: "Visa",
-    date: "May 2026",
-    description: "Payment Products Development Team",
+    date: "May 2026 – Present",
+    description:
+      "Working within the Platform Products organization on the Site Reliability Engineering (SRE) team, building an alert reconciliation tool.",
   },
   {
     role: "Software Engineering Intern",

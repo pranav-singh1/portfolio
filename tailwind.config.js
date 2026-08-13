@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         bg: '#0a0a0a',
-        accent: '#f5a623',
-        'accent-dim': 'rgba(245, 166, 35, 0.15)',
+        accent: '#f52323',
+        'accent-dim': 'rgba(245, 35, 35, 0.15)',
         dim: '#888',
         'border-subtle': 'rgba(255, 255, 255, 0.06)',
       },

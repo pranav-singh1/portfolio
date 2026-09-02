@@ -11,18 +11,13 @@ export const BIO = {
     "I am a software engineer focused on building data-intensive and ML-powered systems end to end. Most of my work is backend and infrastructure-oriented, including APIs, data pipelines, and performance-sensitive services, with frontend used primarily to ship complete products.",
 };
 
-export const CURRENTLY = {
-  label: "Currently",
-  text: "SWE Intern @ Visa · Summer 2026",
-};
-
 export const EXPERIENCE = [
   {
     role: "Software Engineering Intern",
     company: "Visa",
-    date: "May 2026 – Present",
+    date: "May 2026 – Aug 2026",
     description:
-      "Working within the Platform Products organization on the Site Reliability Engineering (SRE) team, building an alert reconciliation tool.",
+      "Worked on the Site Reliability Engineering team within Platform Products, building an agentic pipeline that scanned 82 microservice repos and used LLM extraction to diff API inventories against alert configs — surfacing 1,359 endpoints, 97.4% without alert coverage. Designed streaming extraction with SHA-based caching and completeness checks to handle large monorepos reliably. Shipped a full-stack dashboard with a natural-language query agent and a CLI for fleet-wide scans and automated GitHub PRs.",
   },
   {
     role: "Software Engineering Intern",

@@ -1,4 +1,4 @@
-import { BIO, CURRENTLY } from '../data';
+import { BIO } from '../data';
 import CarScene from './CarScene';
 
 export default function Hero() {
@@ -24,14 +24,7 @@ export default function Hero() {
           {BIO.description}
         </p>
 
-        <div className="hero-fade hero-fade-currently mt-6">
-          <span className="inline-block text-[11px] font-semibold px-2.5 py-1 rounded-sm tracking-widest uppercase mb-1.5" style={{ background: 'var(--accent)', color: 'var(--bg)' }}>
-            {CURRENTLY.label}
-          </span>
-          <p className="text-[13px]" style={{ color: 'var(--text-dim)' }}>{CURRENTLY.text}</p>
-        </div>
-
-        <p className="hero-fade hero-fade-currently text-[13px] mt-5 leading-relaxed" style={{ color: 'var(--text-dim)' }}>
+        <p className="hero-fade hero-fade-currently text-[13px] mt-6 leading-relaxed" style={{ color: 'var(--text-dim)' }}>
           Outside of work and academics, I enjoy basketball, music, weightlifting, cars, and more — added my dream car, the SVJ, right below (click on it).
         </p>
       </div>
